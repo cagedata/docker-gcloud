@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add python py-openssl
+RUN apk update && apk add openssl python py-openssl
 
 ADD https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-120.0.0-linux-x86_64.tar.gz /opt/google-cloud-sdk.tar.gz
 RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt && \

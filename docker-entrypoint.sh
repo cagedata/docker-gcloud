@@ -20,4 +20,8 @@ if [ -n "${GCLOUD_ACCOUNT_FILE}" ]; then
   ${GCLOUD} auth activate-service-account --keyfile=${GCLOUD_ACCOUNT_FILE}
 fi
 
+if [ -n "${KUBE_CLUSTER}" ]; then
+  ${GCLOUD} container clusters get-credentials ${KUBE_CLUSTER}
+fi
+
 exec "$@"
