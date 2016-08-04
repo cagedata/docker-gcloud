@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk update && apk add python
 
 ADD https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-120.0.0-linux-x86_64.tar.gz /opt/google-cloud-sdk.tar.gz
-RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt \
+RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt && \
   /opt/google-cloud-sdk/install.sh --quiet --path-update=true --command-completion=true \
     --usage-reporting=true --additional-components=kubectl
 
