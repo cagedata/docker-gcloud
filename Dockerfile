@@ -10,4 +10,4 @@ ENV PATH /opt/google-cloud-sdk/bin:$PATH
 
 COPY docker-entrypoint.sh /opt/google-cloud-sdk/docker-entrypoint.sh
 ENTRYPOINT ["/opt/google-cloud-sdk/docker-entrypoint.sh"]
-CMD ["gcloud"]
+CMD ["gcloud", "info"]
