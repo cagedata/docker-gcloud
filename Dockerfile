@@ -8,7 +8,6 @@ RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt && \
   /opt/google-cloud-sdk/install.sh --quiet --path-update=true --command-completion=true \
     --usage-reporting=true --additional-components=kubectl
 ENV PATH /opt/google-cloud-sdk/bin:$PATH
-ENV CLOUDSDK_PYTHON_SITEPACKAGES 1
 
 COPY docker-entrypoint.sh /opt/google-cloud-sdk/docker-entrypoint.sh
 ENTRYPOINT ["/opt/google-cloud-sdk/docker-entrypoint.sh"]
